@@ -1,0 +1,9 @@
+<form (ngSubmit)="onSubmit()">
+    <label for="endpoint">Endpoint URL:</label>
+    <input type="text" id="endpoint" [(ngModel)]="endpoint" name="endpoint" required>
+    
+    <label for="frequency">Frequency (hours):</label>
+    <input type="number" id="frequency" [(ngModel)]="frequency" name="frequency" required>
+    
+    <button type="submit">Submit</button>
+  </form>
