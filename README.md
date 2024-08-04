@@ -1,27 +1,116 @@
-# TempEndpointCleaner
+# Endpoint Scheduler Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+This project consists of two parts: an Angular frontend and a Flask backend. The frontend allows users to submit endpoints with a specified frequency and HTTP method, while the backend schedules and handles these requests.
 
-## Development server
+## Application Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+You can visit the live demo of the application here: [Endpoint Scheduler Client](https://endpoint-scheduler-client.vercel.app/)
 
-## Code scaffolding
+## Frontend (Angular)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Repository
 
-## Build
+[Frontend Repository](https://github.com/alexyocruz1/endpoint-scheduler-client)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
 
-## Running unit tests
+- Node.js (https://nodejs.org/)
+- Angular CLI (https://angular.io/cli)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Setup
 
-## Running end-to-end tests
+1. **Clone the repository:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   git clone https://github.com/alexyocruz1/endpoint-scheduler-client.git
+   cd endpoint-scheduler-client
+   ```
 
-## Further help
+2. **Install dependencies:**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+   ```bash
+   npm install
+   ```
+
+3. **Run the application:**
+
+   ```bash
+   ng serve
+   ```
+
+   The application will be available at `http://localhost:4200`.
+
+### Deployment on Vercel
+
+1. **Install Vercel CLI:**
+
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Login to Vercel:**
+
+   ```bash
+   vercel login
+   ```
+
+3. **Deploy the application:**
+
+   ```bash
+   vercel
+   ```
+
+   Follow the prompts to complete the deployment.
+
+## Backend (Flask)
+
+### Repository
+
+[Backend Repository](https://github.com/alexyocruz1/endpoint-scheduler-server)
+
+### Prerequisites
+
+- Python 3.x (https://www.python.org/)
+- pip (https://pip.pypa.io/en/stable/)
+
+### Setup
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/alexyocruz1/endpoint-scheduler-server.git
+   cd endpoint-scheduler-server
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the application:**
+
+   ```bash
+   python app.py
+   ```
+
+   The application will be available at `http://localhost:5000`.
+
+### Deployment on Render
+
+1. **Create a new web service on Render:**
+
+   - Go to [Render](https://render.com/)
+   - Click on "New" and select "Web Service"
+   - Connect your GitHub repository
+   - Set the build and start commands:
+     - Build Command: `pip install -r requirements.txt`
+     - Start Command: `python app.py`
+
+2. **Deploy the application:**
+
+   Render will automatically build and deploy your application. You can monitor the deployment process in the Render dashboard.
+
+## License
+
+This project is licensed under the MIT License.
