@@ -20,11 +20,11 @@ export class CleanFormComponent {
   onSubmit() {
     this.apiService.submitEndpoint({ endpoint: this.endpoint, frequency: this.frequency, method: this.method })
       .subscribe({
-        next: () => {
-          alert('Endpoint submitted successfully');
+        next: (response) => {
+          alert(response.message); // Display the message returned by the backend
         },
-        error: () => {
-          alert('Error submitting endpoint');
+        error: (error) => {
+          alert('Error submitting endpoint: ' + error.message); // Display the error message
         }
       });
   }
