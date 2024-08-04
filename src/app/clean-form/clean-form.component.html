@@ -1,9 +1,17 @@
 <form (ngSubmit)="onSubmit()">
-    <label for="endpoint">Endpoint URL:</label>
-    <input type="text" id="endpoint" [(ngModel)]="endpoint" name="endpoint" required>
-    
-    <label for="frequency">Frequency (hours):</label>
-    <input type="number" id="frequency" [(ngModel)]="frequency" name="frequency" required>
-    
-    <button type="submit">Submit</button>
-  </form>
+  <label for="endpoint">Endpoint URL:</label>
+  <input type="text" id="endpoint" [(ngModel)]="endpoint" name="endpoint" required>
+  
+  <label for="frequency">Frequency (hours):</label>
+  <input type="number" id="frequency" [(ngModel)]="frequency" name="frequency" required>
+  
+  <label for="method">HTTP Method:</label>
+  <select id="method" [(ngModel)]="method" name="method" required>
+    <option value="GET">GET</option>
+    <option value="POST">POST</option>
+    <option value="PUT">PUT</option>
+    <option value="DELETE">DELETE</option>
+  </select>
+  
+  <button type="submit">Submit</button>
+</form>

@@ -11,7 +11,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  submitEndpoint(data: { endpoint: string; frequency: number }): Observable<any> {
+  submitEndpoint(data: { endpoint: string; frequency: number, method: string }): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/submit`, data);
   }
 }

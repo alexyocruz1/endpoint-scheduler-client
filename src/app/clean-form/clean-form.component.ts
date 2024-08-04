@@ -13,11 +13,12 @@ import { ApiService } from '../services/api.service';
 export class CleanFormComponent {
   endpoint: string = '';
   frequency: number = 24; // Default frequency
+  method: string = 'GET'; // Default method
 
   constructor(private apiService: ApiService) {}
 
   onSubmit() {
-    this.apiService.submitEndpoint({ endpoint: this.endpoint, frequency: this.frequency })
+    this.apiService.submitEndpoint({ endpoint: this.endpoint, frequency: this.frequency, method: this.method })
       .subscribe({
         next: () => {
           alert('Endpoint submitted successfully');
